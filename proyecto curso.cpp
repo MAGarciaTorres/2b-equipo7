@@ -92,7 +92,7 @@ do{
 
 	int numero = palabra.length();
 
-		cout << "La frase escrita, al reves, es:" << endl;
+		cout << "La frase sin el primer caracter, es:" << endl;
 		for (int i=1; i<=numero-1; i++)
 		{
 			cout << palabra[i];
