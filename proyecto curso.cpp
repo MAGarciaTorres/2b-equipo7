@@ -76,43 +76,31 @@ do{
 	}
 
 
-gotoxy(0,5); cout<<"\ndigite 0 si desea salir o cualquier otro numero si desea seguir::";
+gotoxy(0,5); cout<<"\ndigite 0 si desea salir o cualquier otro numero si desea seguir:";
 cin>>p;
 
 }while( p != 0);
 }
 
 
-void numberOfCharacters() {
-    std::string inputString;
-    char inputCharacter;
-    char option;
-    
-    system("cls");
+void numberOfCharacters(string palabra, int p=1) {
+   
+do{
+	system("cls");
+	cout << "Escriba una frase cualquiera(si la palabra tiene espacios ponga un guion bajo): " << endl;
+	cin>>palabra;
 
-    std::cout << "Ingrese la cadena de texto: ";
-    std::getline(std::cin, inputString);
-    std::cout << "Ingrese el carácter a eliminar: ";
-    std::cin >> inputCharacter;
-    std::cin.ignore();
-    
-    std::string resultString = "";
-    for (std::string::size_type i = 0; i < inputString.length(); ++i) {
-        if (inputString[i] != inputCharacter) {
-            resultString += inputString[i];
-        }
-    }
+	int numero = palabra.length();
 
-    std::cout << "El resultado es: " << resultString << std::endl;
-
-    
-    std::cout << "¿Desea repetir el proceso? (S/N): ";
-    std::cin >> option;
-    if (option == 'S' || option == 's') {
-        std::cin.ignore();
-        numberOfCharacters(); 
-    } 
-
+		cout << "La frase escrita, al reves, es:" << endl;
+		for (int i=1; i<=numero-1; i++)
+		{
+			cout << palabra[i];
+	}
+ cout<<"\ndigite 0 si desea salir o cualquier otro numero si desea seguir:";
+ cin>>p;
+ 
+}while(p != 0);
 
 }
 
@@ -217,7 +205,7 @@ break;
 break;
 
 	case 4:
-	 numberOfCharacters();
+	 numberOfCharacters(palabra,p);
     return 0;
 break;
 
