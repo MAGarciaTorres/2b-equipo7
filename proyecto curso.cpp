@@ -14,7 +14,7 @@ using namespace std;
 
 void EvaluaNum(int p = 1){ 
 
-while( p != 0){ 
+do{ 
 system ("cls");
 double num;
 
@@ -35,9 +35,9 @@ cout << num << " es un valor negativo"<<endl;
  
 } 
 
-cout<<"\ndigite 0 si desea salir:";
+cout<<"\ndigite 0 si desea salir o cualquier otro numero si desea seguir:";
 cin>>p;
-} 
+}while( p != 0);
 
 } 
 
@@ -52,7 +52,7 @@ int multiplicacion() {
 		cin >> n1 >> n2 >> n3 >> n4 >> n5 >> n6 >> n7 >> n8 >> n9 >> n10;
 		mult = n1*n2*n3*n4*n5*n6*n7*n8*n9*n10;
 		cout << "el resultado de multiplicar todos los numeros es: " << mult << endl;
-		cout << "\ndigite 0 si desea salir:";
+		cout << "\ndigite 0 si desea salir o cualquier otro numero si desea seguir::";
 		opc = 0;
 		cin >> opc;
 	} while (opc!=0);
@@ -60,7 +60,7 @@ int multiplicacion() {
 }
 
 void PalabraIn(string palabra, int p = 1){
-	while( p != 0){
+do{
 	system("cls");
 
 
@@ -76,10 +76,10 @@ void PalabraIn(string palabra, int p = 1){
 	}
 
 
-gotoxy(0,5); cout<<"\nDigite 0 si desea salir:";
+gotoxy(0,5); cout<<"\ndigite 0 si desea salir o cualquier otro numero si desea seguir::";
 cin>>p;
 
-}
+}while( p != 0);
 }
 
 
@@ -87,7 +87,6 @@ void numberOfCharacters() {
     std::string inputString;
     char inputCharacter;
     char option;
-    while(  option != 'n'){ 
     
     system("cls");
 
@@ -113,13 +112,13 @@ void numberOfCharacters() {
         std::cin.ignore();
         numberOfCharacters(); 
     } 
-}
+
 
 }
 
 void MultiplicaPor(int x){
 
-	while( x != 0){
+	do{
 	int num[10];
 		system("cls");
 
@@ -139,9 +138,9 @@ void MultiplicaPor(int x){
 		}
 
 
-			cout<<"\ndigite 0 si desea salir:";
+			cout<<"\ndigite 0 si desea salir o cualquier otro numero si desea seguir::";
 			cin>>x;
-	}
+	}while( x != 0);
 
 }
 
@@ -166,14 +165,14 @@ void dibujo(int p){
 string ast[9]={ "*", "**", "***", "****", "*****", "****", "***", "**", "*" } ;
 system("cls");
 
-while( p != 0){
+do{
 
 for(int i; i !=9; i++){
 cout<< ast[i]<<endl;}
 
 
 cout<<"\ndigite 0 si desea salir:";
-cin>>p; }
+cin>>p; }while( p != 0);
 
 }
 
